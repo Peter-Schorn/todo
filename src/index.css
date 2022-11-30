@@ -1,0 +1,48 @@
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+#todo-view {
+    margin-top: 20px;
+}
+
+#todos {
+    /* text-align: center; */
+}
+
+.todo-item-main {
+    width: 300px;
+    padding: 10px;
+    margin: auto;
+
+}
+
+.todo-form {
+    /* width: 400px; */
+    margin: auto;
+}
+
+.form-input {
+    border: none;
+    border-bottom: 1px solid black;
+    width: 200px;
+}
+
+.checkbox {
+    margin-right: 10px;
+}
+
+.remove-button {
+    all: unset;
+    margin-left: 10px;
+}
+
+.buttons {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.buttons button {
+    margin: 10px
+}
