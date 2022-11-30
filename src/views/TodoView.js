@@ -6,10 +6,10 @@ export default class TodoView extends React.Component {
 
     constructor(props) {
         super(props);
+        const todos = JSON.parse(window.localStorage.getItem("todos"))
+                ?? [new TodoItem(false, "")];
         this.state = {
-            todos: [
-                new TodoItem(false, "")
-            ]
+            todos: todos
         };
         this.addTodo = this.addTodo.bind(this);
         this.handleCheck = this.handleCheck.bind(this);
@@ -33,6 +33,7 @@ export default class TodoView extends React.Component {
         this.setState({
             todos: modifiedTodos
         });
+        window.localStorage.setItem("todos", JSON.stringify(modifiedTodos));
     }
 
     handleChange(id, event) {
@@ -49,6 +50,7 @@ export default class TodoView extends React.Component {
         this.setState({
             todos: modifiedTodos
         });
+        window.localStorage.setItem("todos", JSON.stringify(modifiedTodos));
     }
 
     handleRemove(id, event) {
@@ -58,6 +60,7 @@ export default class TodoView extends React.Component {
         this.setState({
             todos: remainingTodos
         });
+        window.localStorage.setItem("todos", JSON.stringify(remainingTodos));
     }
 
     addTodo() {
@@ -66,6 +69,7 @@ export default class TodoView extends React.Component {
         this.setState({
             todos: todos
         });
+        window.localStorage.setItem("todos", JSON.stringify(todos));
     }
 
     removeChecked() {
