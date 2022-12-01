@@ -9,6 +9,8 @@
     "react-bootstrap": "^2.6.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
+    "serve": "^14.1.2",
+    "socket.io": "^4.5.4",
     "uuid": "^9.0.0"
   },
   "scripts": {

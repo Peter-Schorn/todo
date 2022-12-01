@@ -80,12 +80,14 @@ export default class TodoView extends React.Component {
         this.setState({
             todos: uncheckedTodos
         });
+        window.localStorage.setItem("todos", JSON.stringify(uncheckedTodos));
     }
 
     removeAll() {
         this.setState({
             todos: []
         });
+        window.localStorage.clear();
     }
 
     render() {
