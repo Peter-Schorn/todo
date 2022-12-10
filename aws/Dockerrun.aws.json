@@ -1,16 +1,12 @@
 {
     "AWSEBDockerrunVersion": "1",
-    "Authentication": {
-        "bucket": "docker-config-peter",
-        "key": ".dockercfg"
-    },
     "Image": {
         "Name": "947734355387.dkr.ecr.us-east-1.amazonaws.com/todo:latest",
         "Update": "true"
-      },
+    },
     "Ports": [
         {
-            "ContainerPort": 8080
+            "ContainerPort": 3000
         }
     ]
 }
